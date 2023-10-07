@@ -97,6 +97,12 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+#rotate-icon {
+  width: 100%;
+}
+#entry-text {
+  height: 85%;
+}
 
 .tag-1-side.is-back .tag-1-text {
   background: #650071;
@@ -109,8 +115,12 @@
   }
   .tag-container {
     width: 320px;
-    height: 320px;
+    height: 340px;
   }
+  #entry-text {
+    height: 80%;
+  }
+
   .tag-1-text {
     margin-top: 20px;
     padding: 20px;
