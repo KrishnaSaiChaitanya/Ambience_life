@@ -1,0 +1,120 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tag-container {
+  width: 360px;
+  height: 380px;
+  margin: 10px;
+  position: relative;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+
+.tag {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.tag-container:hover .tag {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.tag-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.tag-side.is-back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+
+.tag-text {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tag-1-side.is-back .tag-1-top:before {
+  background: #650071;
+}
+
+.tag-1-text {
+  background: #650071;
+  display: flex;
+  padding: 40px;
+  margin-top: 50px;
+  border-radius: 30px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.tag-1-side.is-back .tag-1-text {
+  background: #650071;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  #card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tag-container {
+    width: 320px;
+    height: 320px;
+  }
+  .tag-1-text {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .main > h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #prompt-image {
+    display: none;
+  }
+}
+.title {
+  text-align: center;
+}

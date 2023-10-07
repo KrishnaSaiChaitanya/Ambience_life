@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import TextSlider from "./Components/TextSlider";
 import Home from "./Components/Home";
+import AnimatedCard from "./Components/_BrickJournalEntry";
 
 function App() {
   const texts = [
@@ -15,11 +16,12 @@ function App() {
 
   return (
     <div className="App">
+      <AnimatedCard />
       {/* <AAppAFunction /> */}
       {/* <VerticalTabs /> */}
       {/* <AnimatedText text={textToAnimate} /> */}
       {/* <TextSlider texts={texts} /> */}
-      <Home />
+      {/* <Home /> */}
     </div>
   );
 }

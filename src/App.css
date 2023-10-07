@@ -6,3 +6,6 @@
   font-family: "Plus Jakarta Sans", sans-serif;
   /* background: linear-gradient(46deg, #27002b, #650071); */
 }
+html {
+  height: 100%;
+}
