@@ -16,7 +16,19 @@ function App() {
 
   return (
     <div className="App">
-      <AnimatedCard />
+      <AnimatedCard
+        weekOfYear={20}
+        year={2023}
+        prompt="By the end of this year, what is one achievable goal you'd like to reach in your personal life? What is one in your professional life?"
+        entry="For reading: <br /> 1) Set aside 30 minutes daily for reading
+                  <br /> 2) Join a book club <br /> 3) Reduce screen time before
+                  bed. <br />
+                  For certification: <br />
+                  1) Research best courses <br />
+                  2) Dedicate weekends for study <br /> 3) Join study groups"
+        advancedPrompt="Advanced Prompt: 'What is one challenging but achievable goal you'd like to reach in your personal life? Professional life?'"
+        advancedEntry="Introducing the ambience.LIFE app!"
+      />
       {/* <AAppAFunction /> */}
       {/* <VerticalTabs /> */}
       {/* <AnimatedText text={textToAnimate} /> */}

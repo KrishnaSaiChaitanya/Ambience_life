@@ -33,7 +33,15 @@
   transition: transform 1s, -webkit-transform 1s;
 }
 
-.tag-container:hover .tag {
+/* .tag-container:hover .tag {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+} */
+.tag.rotated_one {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.tag.rotated_two {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -117,4 +125,21 @@
 }
 .title {
   text-align: center;
+}
+
+.tag-container.flipped .tag {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.tag-container.flipped .tag-side.is-back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  z-index: 1;
+}
+
+/* Add a class for the flipped state */
+.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
